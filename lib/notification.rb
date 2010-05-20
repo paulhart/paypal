@@ -214,6 +214,11 @@ jZJTylbJQ1b5PBBjGiP0PpK48cdF
       return Money.new(gross_cents) # maybe you have an own money object which doesn't take a currency?
     end
     
+    # Just give me a particular parameter value
+    def value_of(key)
+      params[key]
+    end
+    
     # reset the notification. 
     def empty!
       @params  = Hash.new
